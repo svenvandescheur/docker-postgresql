@@ -28,6 +28,5 @@ else
     chown -R postgres:postgres /srv//postgresql/
     chown -R postgres:postgres /var/run/postgresql/
 
-    service postgresql start || exit 1
-    tail -fn 0 /var/log/postgresql/postgresql-9.5-main.log
+    sudo postgres /usr/lib/postgresql/9.5/bin/postgres -D /srv/postgresql/main/
 fi
